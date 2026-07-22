@@ -89,11 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* --- CONTACT FORM VALIDATION & MOCK SUBMISSION --- */
+  /* --- CONTACT FORM API SUBMISSION (FORMSPREE) --- */
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
 
-  contactForm.addEventListener('submit', (e) => {
+  // Replace this placeholder with your free Formspree Form ID (e.g., "xoqgpkyd")
+  const FORMSPREE_FORM_ID = 'YOUR_FORMSPREE_ID_HERE';
+
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     const name = document.getElementById('name').value.trim();
@@ -110,9 +114,46 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Mock API Submission Success
-    showStatus('Thank you! Your message has been sent successfully.', 'success');
-    contactForm.reset();
+    // Check if user has replaced the placeholder ID
+    if (FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_ID_HERE') {
+      showStatus('Form setup successful! To make it active, replace FORMSPREE_FORM_ID in index.js with your free Formspree ID.', 'success');
+      contactForm.reset();
+      return;
+    }
+
+    // Disable submit button and show visual sending state
+    submitBtn.disabled = true;
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Message...';
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (response.ok) {
+        showStatus('Thank you! Your message has been sent successfully.', 'success');
+        contactForm.reset();
+      } else {
+        const data = await response.json();
+        if (data.errors && data.errors.length > 0) {
+          showStatus(data.errors.map(err => err.message).join(', '), 'error');
+        } else {
+          showStatus('Oops! Something went wrong while sending. Please try again.', 'error');
+        }
+      }
+    } catch (error) {
+      showStatus('Oops! Network error. Please check your connection and try again.', 'error');
+    } finally {
+      // Restore button state
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    }
   });
 
   function isValidEmail(email) {
@@ -125,10 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
     formStatus.className = `form-status ${type}`;
     formStatus.style.display = 'block';
     
-    // Clear message alert after 5s
+    // Clear message alert after 8s
     setTimeout(() => {
       formStatus.style.display = 'none';
-    }, 5000);
+    }, 8000);
   }
 
   /* --- SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER) --- */
