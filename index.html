@@ -1,461 +1,1705 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalyany S Nair | Portfolio</title>
-  <meta name="description" content="Professional portfolio of Kalyany S Nair, an Integrated MCA student specializing in full-stack web development and blockchain. Check out my projects, experience, and skills.">
-  
+  <title>Kalyany S Nair | Technology Enthusiast, Software Developer &amp; Integrated MCA Student</title>
+  <meta name="description"
+    content="Official portfolio of Kalyany S Nair, Integrated MCA student (CGPA: 9.1), software developer, and technology enthusiast. Building practical technology solutions through software development, modern web technologies, databases, and emerging AI applications.">
+  <meta name="keywords"
+    content="Kalyany S Nair, Technology Enthusiast, Software Developer, Full Stack Developer, Integrated MCA, Amal Jyothi College of Engineering, React, FastAPI, Next.js, Spring Boot, PostgreSQL, MySQL, AWS EC2, Vercel, WordPress, Software Testing, Selenium, Python, Java">
+  <meta name="author" content="Kalyany S Nair">
+
+  <!-- Open Graph / Social Sharing Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kalyany S Nair | Technology Enthusiast &amp; Software Developer">
+  <meta property="og:description"
+    content="Building practical technology solutions through software development, modern web technologies, databases, and emerging AI applications.">
+  <meta property="og:url" content="https://kalyanysnair.github.io/Portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kalyany S Nair | Technology Enthusiast &amp; Software Developer">
+  <meta name="twitter:description"
+    content="Building practical technology solutions through software development, modern web technologies, databases, and emerging AI applications.">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Favicon (Crisp SVG Terminal Icon) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%236366f1'/><path d='M8 11l5 5-5 5M15 21h9' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+  <!-- Google Fonts: Outfit, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="index.css?v=1.3">
+  <link rel="stylesheet" href="index.css?v=3.0">
 </head>
+
 <body>
 
-  <!-- --- HEADER / NAVIGATION --- -->
+  <!-- ================= HEADER & NAVIGATION ================= -->
   <header class="header" id="header">
     <div class="container nav-container">
-      <a href="#home" class="logo">
-        Kalyany<span class="logo-dot"></span>
+      <a href="#home" class="logo" aria-label="Kalyany S Nair Homepage">
+        <span class="logo-symbol">&lt;</span>Kalyany<span class="logo-accent">.dev</span><span class="logo-symbol"> /&gt;</span>
       </a>
-      
-      <nav>
+
+      <nav class="nav-menu" id="nav-menu">
         <ul class="nav-links" id="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      
+
       <div class="nav-actions">
-        <button class="theme-btn" id="theme-btn" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        <!-- Direct Resume Download in Header -->
+        <a href="assets/resume/Kalyany_S_Nair_Resume.pdf" class="btn btn-nav-resume"
+          download="Kalyany_S_Nair_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </a>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button class="theme-btn" id="theme-btn" aria-label="Switch between dark and light themes" title="Toggle Theme">
+          <i class="fa-solid fa-sun" id="theme-icon"></i>
         </button>
-        <div class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
-        </div>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- --- HERO SECTION --- -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <span class="hero-greeting">Welcome to my space</span>
-        <h1 class="hero-title">Hi, I'm <span>Kalyany S Nair</span></h1>
-        <h2 class="hero-subtitle">Integrated MCA Student &amp; Developer</h2>
-        <p class="hero-description">
-          I build scalable web applications, design backend APIs, and explore decentralized blockchain applications. Currently studying at Amal Jyothi College of Engineering.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Let's Connect</a>
-          <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> View Work</a>
-        </div>
-      </div>
-      
-      <div class="hero-visual">
-        <div class="visual-orbit orbit-1"></div>
-        <div class="visual-orbit orbit-2"></div>
-        <div class="visual-box">
-          <img src="assets/hero-bg.png" alt="Futuristic Tech Background Design">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- ABOUT SECTION --- -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Introduction</span>
-        <h2 class="section-title">About Me</h2>
-      </div>
-      
-      <div class="about-grid">
-        <div class="about-info">
-          <h3>Passionate about development &amp; problem solving</h3>
-          <p>
-            I am an Integrated MCA student with practical experience in web application development, backend systems, and modern frontend technologies. I focus on creating scalable, user-centric applications, leveraging robust software engineering practices.
-          </p>
-          <p>
-            My academic and project experience has shaped a strong baseline in coding, collaborative teamwork, and continuous skill refinement. I am always excited to learn new stacks and contribute to real-world technology initiatives.
-          </p>
-          
-          <div class="metrics-grid">
-            <div class="metric-card glass-panel">
-              <div class="metric-num">9.1</div>
-              <div class="metric-label">Academic CGPA</div>
-            </div>
-            <div class="metric-card glass-panel">
-              <div class="metric-num">3+</div>
-              <div class="metric-label">Key Projects</div>
-            </div>
-          </div>
-        </div>
+  <main>
+    <!-- ================= REDESIGNED HERO LANDING PAGE ================= -->
+    <section class="hero" id="home">
+      <div class="hero-ambient-glow"></div>
+      <div class="container hero-composition">
         
-        <div class="about-education">
-          <div class="education-card glass-panel">
-            <div class="edu-header">
-              <h4 class="edu-title">Integrated Master of Computer Applications (MCA)</h4>
-              <span class="edu-year">2022 – 2027</span>
-            </div>
-            <p class="edu-institution">Amal Jyothi College of Engineering (Autonomous)</p>
-            <div class="edu-cgpa">
-              <i class="fa-solid fa-graduation-cap"></i> CGPA: 9.1
-            </div>
+        <!-- Top Telemetry & Location Ribbon -->
+        <div class="hero-telemetry-bar">
+          <div class="telemetry-item">
+            <span class="pulse-dot"></span>
+            <span class="telemetry-text">Open to Technology &amp; Software Opportunities</span>
           </div>
-          
-          <div class="education-card glass-panel">
-            <div class="edu-header">
-              <h4 class="edu-title">Soft Skills</h4>
-            </div>
-            <div class="skills-list" style="margin-top: 10px;">
-              <span class="skill-tag"><i class="fa-solid fa-brain" style="color: #a78bfa;"></i> Problem Solving</span>
-              <span class="skill-tag"><i class="fa-solid fa-users" style="color: #60a5fa;"></i> Teamwork</span>
-              <span class="skill-tag"><i class="fa-solid fa-comments" style="color: #34d399;"></i> Communication</span>
-              <span class="skill-tag"><i class="fa-solid fa-crown" style="color: #fbbf24;"></i> Leadership</span>
-              <span class="skill-tag"><i class="fa-solid fa-sliders" style="color: #f87171;"></i> Adaptability</span>
-              <span class="skill-tag"><i class="fa-solid fa-clock" style="color: #fb7185;"></i> Time Management</span>
-            </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item location-item">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span>Kottayam, Kerala, India</span>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- SKILLS SECTION --- -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Competencies</span>
-        <h2 class="section-title">Technical Skills</h2>
-      </div>
-      
-      <div class="skills-grid">
-        <!-- Category 1: Languages -->
-        <div class="skills-category glass-panel">
-          <h3><i class="fa-solid fa-terminal"></i> Languages</h3>
-          <div class="skills-list">
-            <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
-            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
-            <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
-            <span class="skill-tag"><i class="fa-solid fa-code"></i> C</span>
-            <span class="skill-tag"><i class="fa-solid fa-code"></i> C++</span>
-          </div>
-        </div>
-        
-        <!-- Category 2: Web Technologies -->
-        <div class="skills-category glass-panel">
-          <h3><i class="fa-solid fa-globe"></i> Web Technologies</h3>
-          <div class="skills-list">
-            <span class="skill-tag"><i class="fa-brands fa-react"></i> React.js</span>
-            <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
-            <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-            <span class="skill-tag"><i class="fa-brands fa-php"></i> PHP</span>
-            <span class="skill-tag"><i class="fa-brands fa-node-js" style="color: #339933;"></i> Node.js</span>
-          </div>
-        </div>
-        
-        <!-- Category 3: Databases -->
-        <div class="skills-category glass-panel">
-          <h3><i class="fa-solid fa-database"></i> Databases</h3>
-          <div class="skills-list">
-            <span class="skill-tag"><i class="fa-solid fa-database"></i> MySQL</span>
-            <span class="skill-tag"><i class="fa-solid fa-server"></i> Database Mgmt</span>
-          </div>
-        </div>
-        
-        <!-- Category 4: Tools & Platforms -->
-        <div class="skills-category glass-panel">
-          <h3><i class="fa-solid fa-cubes"></i> Tools &amp; Platforms</h3>
-          <div class="skills-list">
-            <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
-            <span class="skill-tag"><i class="fa-brands fa-aws"></i> AWS EC2</span>
-            <span class="skill-tag"><i class="fa-solid fa-hammer"></i> Hardhat</span>
-            <span class="skill-tag"><i class="fa-solid fa-wallet"></i> MetaMask</span>
-            <span class="skill-tag"><i class="fa-brands fa-ethereum"></i> Solidity</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- EXPERIENCE SECTION --- -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Career History</span>
-        <h2 class="section-title">Work Experience</h2>
-      </div>
-      
-      <div class="exp-proj-layout">
-        <div class="timeline">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <h3 class="timeline-role">Software Development Intern</h3>
-                <span class="timeline-duration">June 2026 – July 2026</span>
-              </div>
-              <div class="timeline-company">AinSoft Solutions Pvt. Ltd., Thiruvananthapuram</div>
-              <ul class="timeline-details">
-                <li>Participated in backend API development and architecture definition during a hybrid internship program.</li>
-                <li>Contributed to React-based web page development, UI adjustments, and application integration tasks.</li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <h3 class="timeline-role">Intern Hub – Program &amp; Academic Support</h3>
-                <span class="timeline-duration">Dec 2024 – Mar 2025</span>
-              </div>
-              <div class="timeline-company">Amal Jyothi College of Engineering</div>
-              <ul class="timeline-details">
-                <li>Assisted in academic coordination, resource mapping, and documentation activities.</li>
-                <li>Supported faculty and organization teams in coordinating institutional programs and engineering symposia.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- PROJECTS SECTION --- -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Showcase</span>
-        <h2 class="section-title">Featured Projects</h2>
-      </div>
-      
-      <div class="projects-grid">
-        <!-- Project 1: SwiftAid -->
-        <div class="project-card glass-panel">
-          <div class="project-icon">
-            <i class="fa-solid fa-truck-medical"></i>
-          </div>
-          <h3 class="project-title">Ambulance Booking System</h3>
-          <p class="project-description">
-            A comprehensive web-based ambulance booking platform built to facilitate emergency and scheduled ride bookings, complete with user authentication, administrative dashboard, and reactive response modules.
-          </p>
-          <div class="project-tech">
-            <span class="project-tech-tag">PHP</span>
-            <span class="project-tech-tag">HTML5</span>
-            <span class="project-tech-tag">CSS3</span>
-            <span class="project-tech-tag">JavaScript</span>
-            <span class="project-tech-tag">MySQL</span>
-          </div>
-        </div>
-        
-        <!-- Project 2: PlayTown -->
-        <div class="project-card glass-panel">
-          <div class="project-icon">
-            <i class="fa-solid fa-gamepad"></i>
-          </div>
-          <h3 class="project-title">E-Commerce Website</h3>
-          <p class="project-description">
-            A secure e-commerce application containing a comprehensive product catalog, active shopping cart, user profile management, checkout flows, and database order logging.
-          </p>
-          <div class="project-tech">
-            <span class="project-tech-tag">PHP</span>
-            <span class="project-tech-tag">HTML5</span>
-            <span class="project-tech-tag">CSS3</span>
-            <span class="project-tech-tag">MySQL</span>
-            <span class="project-tech-tag">AWS EC2</span>
-          </div>
-        </div>
-        
-        <!-- Project 3: EduFund -->
-        <div class="project-card glass-panel">
-          <div class="project-icon">
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item edu-item">
             <i class="fa-solid fa-graduation-cap"></i>
-          </div>
-          <h3 class="project-title">Decentralized Scholarship Platform</h3>
-          <p class="project-description">
-            A secure blockchain-powered scholarship ecosystem utilizing smart contracts for transparent and decentralized funding flows, integrated into a React web interface.
-          </p>
-          <div class="project-tech">
-            <span class="project-tech-tag">Solidity</span>
-            <span class="project-tech-tag">React.js</span>
-            <span class="project-tech-tag">Hardhat</span>
-            <span class="project-tech-tag">Node.js</span>
-            <span class="project-tech-tag">MetaMask</span>
+            <span>Amal Jyothi College of Engg • CGPA 9.1</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- --- CERTIFICATIONS & ACHIEVEMENTS --- -->
-  <section class="section" id="credentials">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Credentials &amp; Milestones</span>
-        <h2 class="section-title">Certifications &amp; Achievements</h2>
-      </div>
-      
-      <div class="certs-achieve-grid">
-        <!-- Certifications -->
-        <div class="certs-layout">
-          <h3><i class="fa-solid fa-certificate"></i> Certifications</h3>
+        <!-- Main Hero Composition: Asymmetric Architectural Layout -->
+        <div class="hero-layout">
           
-          <div class="cert-card glass-panel">
-            <i class="fa-solid fa-cloud cert-icon"></i>
-            <div class="cert-info">
-              <h4>Oracle Cloud Infrastructure 2025 Certified AI Foundations</h4>
-              <p class="cert-provider">Oracle University</p>
-            </div>
-          </div>
-          
-          <div class="cert-card glass-panel">
-            <i class="fa-solid fa-people-group cert-icon"></i>
-            <div class="cert-info">
-              <h4>Professional Scrum Fundamentals (Agile &amp; Scrum)</h4>
-              <p class="cert-provider">Scrum.org</p>
-            </div>
-          </div>
-          
-          <div class="cert-card glass-panel">
-            <i class="fa-solid fa-shield-halved cert-icon"></i>
-            <div class="cert-info">
-              <h4>Google Cybersecurity Certificate</h4>
-              <p class="cert-provider">Google Coursera</p>
-            </div>
-          </div>
-          
-          <div class="cert-card glass-panel">
-            <i class="fa-brands fa-python cert-icon"></i>
-            <div class="cert-info">
-              <h4>Automate Cybersecurity Tasks with Python</h4>
-              <p class="cert-provider">Google Professional Certificate Series</p>
-            </div>
-          </div>
-          
-          <div class="cert-card glass-panel">
-            <i class="fa-solid fa-network-wired cert-icon"></i>
-            <div class="cert-info">
-              <h4>Cloud Computing Basics &amp; Career Acceleration</h4>
-              <p class="cert-provider">Course completion</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Achievements -->
-        <div class="achievements-box glass-panel">
-          <h3><i class="fa-solid fa-trophy"></i> Key Achievements</h3>
-          
-          <div class="achieve-list">
-            <div class="achieve-item">
-              <i class="fa-solid fa-hand-holding-dollar achieve-badge"></i>
-              <div class="achieve-text">
-                <h4>I2U Funded Project Holder</h4>
-                <p>Awarded funding support for research and deployment of innovative web integrations.</p>
-              </div>
-            </div>
-            
-            <div class="achieve-item">
-              <i class="fa-solid fa-user-astronaut achieve-badge"></i>
-              <div class="achieve-text">
-                <h4>NASA Space Apps Challenge Volunteer</h4>
-                <p>Active volunteer organizer and technical support lead for the 2024 &amp; 2025 hackathons.</p>
-              </div>
-            </div>
-            
-            <div class="achieve-item">
-              <i class="fa-solid fa-code-branch achieve-badge"></i>
-              <div class="achieve-text">
-                <h4>Hacktoberfest Contributor</h4>
-                <p>Contributed to open source software repositories and mentored junior git participants.</p>
-              </div>
-            </div>
-            
-            <div class="achieve-item">
-              <i class="fa-solid fa-scale-balanced achieve-badge"></i>
-              <div class="achieve-text">
-                <h4>IPR Cell Member</h4>
-                <p>Intellectual Property Rights cell member focusing on academic innovation protection.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- CONTACT SECTION --- -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Get in Touch</span>
-        <h2 class="section-title">Contact Me</h2>
-      </div>
-      
-      <div class="contact-container">
-        <div class="contact-card glass-panel">
-          <h3>Let's Connect</h3>
-          <p class="contact-intro">
-            I am always open to discussing new opportunities, collaborations, or open-source projects. Feel free to reach out via email or connect with me on social platforms!
-          </p>
-          
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="contact-details">
-                <span>Email</span>
-                <a href="mailto:kalyanysanalnair@gmail.com">kalyanysanalnair@gmail.com</a>
-              </div>
+          <!-- Left Column: Core Identity, Typography, and Action Clustered -->
+          <div class="hero-typography-block">
+            <div class="hero-intro-lead">
+              <span class="intro-greeting">Welcome to my space —</span>
+              <span class="intro-bracket">{</span>
+              <span class="intro-id">kalyany_s_nair</span>
+              <span class="intro-bracket">}</span>
             </div>
 
-            <div class="contact-method">
-              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="contact-details">
-                <span>Location</span>
-                <p>Kottayam, Kerala, India</p>
-              </div>
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Kalyany S Nair</span>
+            </h1>
+
+            <!-- Exact Requested Main Headline -->
+            <h2 class="hero-headline">
+              Technology Enthusiast <span class="headline-sep">/</span> Software Developer <span class="headline-sep">/</span> Integrated MCA Student
+            </h2>
+
+            <!-- Exact Requested Alternative Supporting Statement -->
+            <p class="hero-statement">
+              Building practical technology solutions through software development, modern web technologies, databases, and emerging AI applications.
+            </p>
+
+            <!-- Key Quick Badges -->
+            <div class="hero-quick-badges">
+              <span class="badge-chip"><i class="fa-solid fa-code"></i> Software &amp; Web</span>
+              <span class="badge-chip"><i class="fa-solid fa-database"></i> Database Systems</span>
+              <span class="badge-chip"><i class="fa-solid fa-vial-circle-check"></i> QA &amp; Testing</span>
+              <span class="badge-chip"><i class="fa-solid fa-cloud"></i> Cloud Deployment</span>
+              <span class="badge-chip"><i class="fa-solid fa-brain"></i> Applied AI</span>
             </div>
-          </div>
-          
-          <div class="contact-social">
-            <span>Find me on</span>
-            <div class="social-links">
-              <a href="https://linkedin.com/in/kalyanysnair" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
-                <i class="fa-brands fa-linkedin-in"></i>
+
+            <!-- Action Buttons Cluster -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fa-solid fa-arrow-down-long"></i>
+                <span>Explore Projects (5)</span>
               </a>
-              <a href="https://github.com/Kalyanysnair" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
-                <i class="fa-brands fa-github"></i>
+              <a href="assets/resume/Kalyany_S_Nair_Resume.pdf" class="btn btn-secondary"
+                download="Kalyany_S_Nair_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>Download Resume</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Contact Me</span>
               </a>
             </div>
+
+            <!-- Social and Quick Copy Email Bar -->
+            <div class="hero-connect-bar">
+              <span class="connect-label">Direct Connect:</span>
+              <div class="connect-links">
+                <a href="https://github.com/Kalyanysnair" target="_blank" rel="noopener noreferrer"
+                  class="connect-icon-btn" aria-label="GitHub Profile" title="GitHub - Kalyanysnair">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/kalyanysnair" target="_blank" rel="noopener noreferrer"
+                  class="connect-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn - kalyanysnair">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:kalyanysnair.in@gmail.com" class="connect-icon-btn" aria-label="Email"
+                  title="Direct Email - kalyanysnair.in@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <button class="hero-copy-pill" id="hero-copy-email-btn" type="button" title="Copy email address">
+                  <i class="fa-regular fa-copy"></i>
+                  <span class="copy-email-text">kalyanysnair.in@gmail.com</span>
+                  <span class="hero-copy-tooltip" id="hero-copy-tooltip">Copied!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Reimagined Celestial Technical Orbital Core -->
+          <!-- (Elevated from the original portfolio's iconic planetary visual & hero-bg.png) -->
+          <div class="hero-orbital-stage">
+            <div class="orbital-system-container">
+              
+              <!-- Outer Orbital Ring with Rotating Tech Nodes -->
+              <div class="orbital-ring orbital-ring-outer">
+                <div class="orbital-node node-n" title="FastAPI &amp; Spring Boot"><i class="fa-solid fa-server"></i></div>
+                <div class="orbital-node node-e" title="PostgreSQL &amp; MySQL"><i class="fa-solid fa-database"></i></div>
+                <div class="orbital-node node-s" title="Selenium &amp; pytest"><i class="fa-solid fa-vial"></i></div>
+                <div class="orbital-node node-w" title="TypeScript &amp; React"><i class="fa-brands fa-react"></i></div>
+              </div>
+
+              <!-- Middle Coordinate Ring with Degree Ticks -->
+              <div class="orbital-ring orbital-ring-mid"></div>
+
+              <!-- Inner Morphing Visual Aperture (Features original assets/hero-bg.png) -->
+              <div class="orbital-core-aperture">
+                <div class="orbital-core-glow"></div>
+                <div class="aperture-visual">
+                  <img src="assets/hero-bg.png" alt="Kalyany S Nair - Technical Graphic Design" class="aperture-img">
+                </div>
+              </div>
+
+              <!-- Floating Anchored Metric Telemetries -->
+              <div class="telemetry-card card-academic">
+                <div class="telemetry-card-icon"><i class="fa-solid fa-star"></i></div>
+                <div class="telemetry-card-info">
+                  <span class="telemetry-val">9.1 CGPA</span>
+                  <span class="telemetry-lbl">Integrated MCA</span>
+                </div>
+              </div>
+
+              <div class="telemetry-card card-projects">
+                <div class="telemetry-card-icon"><i class="fa-solid fa-cubes"></i></div>
+                <div class="telemetry-card-info">
+                  <span class="telemetry-val">5 Featured</span>
+                  <span class="telemetry-lbl">Engineered Projects</span>
+                </div>
+              </div>
+
+              <div class="telemetry-card card-hackathon">
+                <div class="telemetry-card-icon"><i class="fa-solid fa-trophy"></i></div>
+                <div class="telemetry-card-info">
+                  <span class="telemetry-val">SIH 2025</span>
+                  <span class="telemetry-lbl">Institution Winner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Competency Marquee Strip -->
+        <div class="hero-competency-strip">
+          <div class="strip-label">Core Domains:</div>
+          <div class="strip-items">
+            <span class="strip-pill"><i class="fa-solid fa-code"></i> Software Development</span>
+            <span class="strip-dot">•</span>
+            <span class="strip-pill"><i class="fa-solid fa-layer-group"></i> Full-Stack Engineering</span>
+            <span class="strip-dot">•</span>
+            <span class="strip-pill"><i class="fa-solid fa-database"></i> Database Architecture</span>
+            <span class="strip-dot">•</span>
+            <span class="strip-pill"><i class="fa-solid fa-vial-circle-check"></i> Software QA &amp; Testing</span>
+            <span class="strip-dot">•</span>
+            <span class="strip-pill"><i class="fa-brands fa-aws"></i> Cloud &amp; AWS EC2</span>
+            <span class="strip-dot">•</span>
+            <span class="strip-pill"><i class="fa-solid fa-brain"></i> AI &amp; RAG Pipelines</span>
+            <span class="strip-dot">•</span>
+            <span class="strip-pill"><i class="fa-brands fa-wordpress"></i> CMS Development</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- --- FOOTER --- -->
+    <!-- ================= ABOUT ME SECTION ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Professional Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-title-bar"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-info-col">
+            <h3 class="about-heading">
+              Versatile Technology Enthusiast &amp; Software Developer
+            </h3>
+            <p class="about-text">
+              I am an Integrated Master of Computer Applications (MCA) student at Amal Jyothi College of Engineering (Autonomous), affiliated with APJ Abdul Kalam Technological University, maintaining an academic record with a <strong>CGPA of 9.1</strong> (2022–2027).
+            </p>
+            <p class="about-text">
+              With a solid foundation in computer science principles and practical problem-solving, my technical experience spans software development, full-stack web applications, database-driven architectures, and backend API engineering. I have developed practical applications using TypeScript, JavaScript, Python, Java, and PHP, working with modern web frameworks including React.js and Next.js, and structuring relational database schemas in PostgreSQL and MySQL.
+            </p>
+            <p class="about-text">
+              Through technical internships at software and blockchain development organizations, I have contributed across the application development lifecycle—from backend API construction and UI component development to hands-on software testing and quality assurance using Selenium WebDriver and pytest. Additionally, I explore modern AI and LLM integration, incorporating Retrieval-Augmented Generation (RAG) and intelligent application workflows into collaborative academic initiatives.
+            </p>
+            <p class="about-text">
+              I am enthusiastic about applying my versatile technical foundation across software engineering, application development, database management, quality assurance, and entry-level technology roles.
+            </p>
+
+            <!-- Key Metric Counters -->
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-num">9.1</div>
+                <div class="metric-label">Academic CGPA</div>
+                <div class="metric-sub">Integrated MCA</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-num">2022–27</div>
+                <div class="metric-label">Degree Timeline</div>
+                <div class="metric-sub">Amal Jyothi College</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-num">4</div>
+                <div class="metric-label">Internships &amp; Roles</div>
+                <div class="metric-sub">Technical &amp; Academic</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-num">5</div>
+                <div class="metric-label">Core Projects</div>
+                <div class="metric-sub">Full Stack, Cloud &amp; AI</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value Proposition / Architectural Pillars -->
+          <div class="about-pillars-col">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Software &amp; Application Development</h4>
+                <p>Building structured, reliable applications and modern responsive user interfaces using clean programming practices and modular architecture.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Backend APIs &amp; Database Engineering</h4>
+                <p>Structuring RESTful APIs, relational database schemas (PostgreSQL, MySQL), and scalable service endpoints with FastAPI, Spring Boot, Node.js, and PHP.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-vial-circle-check"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Software Testing &amp; Quality Assurance</h4>
+                <p>Ensuring system reliability, functional correctness, and regression protection through structured test case design, Selenium WebDriver, and pytest.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>AI &amp; Modern Web Technologies</h4>
+                <p>Integrating intelligent LLM workflows, Retrieval-Augmented Generation (RAG), and modern web frameworks to solve practical operational challenges.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TECHNICAL SKILLS SECTION ================= -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-title-bar"></div>
+          <p class="section-subtitle">
+            Categorized technical capabilities and engineering tooling applied across active projects, internships, and academic coursework.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skills-tag-list">
+              <span class="skill-badge"><i class="fa-solid fa-file-code"></i> TypeScript</span>
+              <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
+              <span class="skill-badge"><i class="fa-solid fa-terminal"></i> C</span>
+              <span class="skill-badge"><i class="fa-solid fa-terminal"></i> C++</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Frontend -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-desktop"></i>
+              </div>
+              <h3 class="category-title">Frontend</h3>
+            </div>
+            <div class="skills-tag-list">
+              <span class="skill-badge"><i class="fa-brands fa-react"></i> React.js</span>
+              <span class="skill-badge"><i class="fa-solid fa-bolt"></i> Next.js</span>
+              <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <h3 class="category-title">Backend</h3>
+            </div>
+            <div class="skills-tag-list">
+              <span class="skill-badge"><i class="fa-solid fa-bolt-lightning"></i> FastAPI</span>
+              <span class="skill-badge"><i class="fa-brands fa-envira"></i> Spring Boot</span>
+              <span class="skill-badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="skill-badge"><i class="fa-brands fa-php"></i> PHP</span>
+              <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Databases -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="category-title">Databases</h3>
+            </div>
+            <div class="skills-tag-list">
+              <span class="skill-badge"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+              <span class="skill-badge"><i class="fa-solid fa-database"></i> MySQL</span>
+              <span class="skill-badge"><i class="fa-solid fa-table"></i> SQL</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Testing -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-vial-circle-check"></i>
+              </div>
+              <h3 class="category-title">Testing</h3>
+            </div>
+            <div class="skills-tag-list">
+              <span class="skill-badge"><i class="fa-solid fa-microchip"></i> Selenium WebDriver</span>
+              <span class="skill-badge"><i class="fa-solid fa-check-double"></i> pytest</span>
+              <span class="skill-badge"><i class="fa-solid fa-list-check"></i> Functional Testing</span>
+              <span class="skill-badge"><i class="fa-solid fa-shield-halved"></i> API Testing</span>
+              <span class="skill-badge"><i class="fa-solid fa-clipboard-check"></i> Test Case Design</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Tools & Platforms -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <h3 class="category-title">Tools &amp; Platforms</h3>
+            </div>
+            <div class="skills-tag-list">
+              <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="skill-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="skill-badge"><i class="fa-brands fa-aws"></i> AWS EC2</span>
+              <span class="skill-badge"><i class="fa-brands fa-linux"></i> Linux</span>
+              <span class="skill-badge"><i class="fa-solid fa-robot"></i> Antigravity</span>
+              <span class="skill-badge"><i class="fa-solid fa-brain"></i> Claude AI</span>
+            </div>
+          </div>
+
+          <!-- Category 7: Concepts (Spans across bottom) -->
+          <div class="skill-category-card skill-category-concepts">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <h3 class="category-title">Core Concepts</h3>
+            </div>
+            <div class="skills-tag-list">
+              <span class="skill-badge"><i class="fa-solid fa-shapes"></i> Object-Oriented Programming (OOP)</span>
+              <span class="skill-badge"><i class="fa-solid fa-arrows-spin"></i> Agile / Scrum</span>
+              <span class="skill-badge"><i class="fa-solid fa-layer-group"></i> Full-Stack Development</span>
+              <span class="skill-badge"><i class="fa-solid fa-plug"></i> API Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROFESSIONAL EXPERIENCE SECTION ================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <div class="section-title-bar"></div>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Experience 1 -->
+          <div class="timeline-card">
+            <div class="timeline-indicator">
+              <div class="timeline-bullet"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-heading-group">
+                  <h3 class="timeline-role">Software Development Intern</h3>
+                  <div class="timeline-org">
+                    <i class="fa-solid fa-building"></i>
+                    <span>AinSoft Solutions Pvt. Ltd., Thiruvananthapuram</span>
+                  </div>
+                </div>
+                <div class="timeline-period-badge">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>June 2026 – July 2026</span>
+                </div>
+              </div>
+              <ul class="timeline-bullet-list">
+                <li>Contributed to backend API development and application integration for an e-commerce platform.</li>
+                <li>Developed and enhanced React-based web pages, improving responsive component design and usability.</li>
+                <li>Supported frontend functionality across application workflows, resolving integration discrepancies between backend endpoints and client UI components.</li>
+              </ul>
+              <div class="timeline-tech-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">Backend APIs</span>
+                <span class="tag">Application Integration</span>
+                <span class="tag">E-Commerce</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-card">
+            <div class="timeline-indicator">
+              <div class="timeline-bullet"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-heading-group">
+                  <h3 class="timeline-role">Blockchain Developer Intern</h3>
+                  <div class="timeline-org">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Kerala Blockchain Academy</span>
+                  </div>
+                </div>
+                <div class="timeline-period-badge">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>September 2024 – November 2024</span>
+                </div>
+              </div>
+              <ul class="timeline-bullet-list">
+                <li>Developed <strong>EduFund</strong>, a decentralized scholarship platform ensuring transparency and trust in scholarship disbursements.</li>
+                <li>Worked with Solidity smart contracts, compiled and tested contract logic using Hardhat, and integrated state handling into a React.js frontend.</li>
+                <li>Integrated blockchain functionality and secure user transaction authorization through MetaMask Web3 wallet provider.</li>
+              </ul>
+              <div class="timeline-tech-tags">
+                <span class="tag">Solidity</span>
+                <span class="tag">Hardhat</span>
+                <span class="tag">MetaMask</span>
+                <span class="tag">React.js</span>
+                <span class="tag">Smart Contracts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-card">
+            <div class="timeline-indicator">
+              <div class="timeline-bullet"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-heading-group">
+                  <h3 class="timeline-role">Python Academic Intern</h3>
+                  <div class="timeline-org">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Quest Innovative Solutions, Thiruvananthapuram</span>
+                  </div>
+                </div>
+                <div class="timeline-period-badge">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>May 2024</span>
+                </div>
+              </div>
+              <ul class="timeline-bullet-list">
+                <li>Completed an intensive academic internship focused on Python programming fundamentals, algorithmic problem solving, and practical application development.</li>
+                <li>Engineered core software scripts and database interaction modules demonstrating object-oriented Python concepts.</li>
+              </ul>
+              <div class="timeline-tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Object-Oriented Programming</span>
+                <span class="tag">Application Development</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="timeline-card">
+            <div class="timeline-indicator">
+              <div class="timeline-bullet"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <div class="timeline-heading-group">
+                  <h3 class="timeline-role">Intern Hub – Program &amp; Academic Support</h3>
+                  <div class="timeline-org">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>Amal Jyothi College of Engineering</span>
+                  </div>
+                </div>
+                <div class="timeline-period-badge">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>September 2024 – November 2024</span>
+                </div>
+              </div>
+              <ul class="timeline-bullet-list">
+                <li>Assisted faculty with academic coordination, institutional documentation, and programme-related activities.</li>
+                <li>Coordinated inter-departmental workflows, scheduling tracking, and student communication during institutional symposiums and technical sessions.</li>
+              </ul>
+              <div class="timeline-tech-tags">
+                <span class="tag">Academic Coordination</span>
+                <span class="tag">Institutional Documentation</span>
+                <span class="tag">Program Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS SECTION (5 PROJECTS) ================= -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Engineering Showcase</span>
+          <h2 class="section-title">Projects Showcase</h2>
+          <div class="section-title-bar"></div>
+          <p class="section-subtitle">
+            Curated selection of 5 practical projects spanning AI-integrated platforms, enterprise applications, cloud deployments, and CMS portals.
+          </p>
+        </div>
+
+        <!-- 5-Project Varied Editorial Grid -->
+        <div class="projects-editorial-grid">
+          
+          <!-- Project 1: RetailSphere AI (Featured Platform Showcase with Real Screenshot) -->
+          <article class="project-card-editorial project-card-featured">
+            <div class="project-media-wrapper">
+              <img src="assets/projects/retailsphere.png" alt="RetailSphere AI Platform Screenshot" class="project-media-img" loading="lazy">
+              <div class="project-media-overlay">
+                <span class="project-overlay-badge"><i class="fa-solid fa-brain"></i> AI &amp; Custom Manufacturing</span>
+              </div>
+            </div>
+
+            <div class="project-details-wrapper">
+              <div class="project-meta-top">
+                <span class="status-pill status-ongoing">
+                  <span class="pulse-dot"></span> Ongoing – Final-Year
+                </span>
+                <span class="deployment-pill status-vercel" title="Configured for Vercel deployment">
+                  <i class="fa-solid fa-cloud-arrow-up"></i> Vercel Deployment
+                </span>
+              </div>
+
+              <h3 class="project-headline">RetailSphere AI</h3>
+              <div class="project-subhead">Intelligent Furniture Retail &amp; Custom Manufacturing Platform</div>
+              
+              <p class="project-summary">
+                An AI-enabled platform integrating furniture retail, product customization, fabrication, inventory, production management, and customer service workflows.
+              </p>
+
+              <div class="project-highlights">
+                <h4 class="highlights-title"><i class="fa-solid fa-list-check"></i> Key Implementations:</h4>
+                <ul class="highlights-list">
+                  <li>AI-assisted product discovery and contextual recommendation engine using LLMs and Retrieval-Augmented Generation (RAG).</li>
+                  <li>Interactive furniture customization pipeline supporting customer dimensioning, finishes, and dynamic Bill of Materials.</li>
+                  <li>Real-time inventory tracking, multi-stage fabrication workflows, and role-based staff administration.</li>
+                </ul>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tech-pills">
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">LLMs</span>
+                  <span class="tech-tag">RAG</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Kalyanysnair/RetailSphereAI" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <i class="fa-brands fa-github"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Arcade (Enterprise E-Learning with Real Banner) -->
+          <article class="project-card-editorial">
+            <div class="project-media-wrapper">
+              <img src="assets/projects/arcade.png" alt="Arcade E-Learning Platform Artwork" class="project-media-img" loading="lazy">
+              <div class="project-media-overlay">
+                <span class="project-overlay-badge"><i class="fa-solid fa-graduation-cap"></i> E-Learning Platform</span>
+              </div>
+            </div>
+
+            <div class="project-details-wrapper">
+              <div class="project-meta-top">
+                <span class="status-pill status-in-progress">
+                  <span class="pulse-dot"></span> In Progress
+                </span>
+              </div>
+
+              <h3 class="project-headline">Arcade</h3>
+              <div class="project-subhead">Modern E-Learning Platform</div>
+              
+              <p class="project-summary">
+                An e-learning platform being developed with a modern Next.js frontend and an enterprise Spring Boot backend to organize, deliver, and manage educational courses and learning resources.
+              </p>
+
+              <div class="project-highlights">
+                <h4 class="highlights-title"><i class="fa-solid fa-list-check"></i> Key Implementations:</h4>
+                <ul class="highlights-list">
+                  <li>Decoupled full-stack architecture pairing a modern Next.js frontend with enterprise Spring Boot backend.</li>
+                  <li>Structured course catalog, learning module navigation, and digital resource management.</li>
+                  <li>Scalable RESTful API service endpoints designed for high student concurrency.</li>
+                </ul>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tech-pills">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">REST APIs</span>
+                  <span class="tech-tag">Java</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Kalyanysnair/Arcade" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <i class="fa-brands fa-github"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: PlayTown (E-Commerce with AWS EC2 Deployment) -->
+          <article class="project-card-editorial">
+            <div class="project-header-graphic graphic-playtown">
+              <div class="graphic-badge"><i class="fa-solid fa-cart-shopping"></i> Full-Stack E-Commerce</div>
+            </div>
+
+            <div class="project-details-wrapper">
+              <div class="project-meta-top">
+                <span class="status-pill status-completed">
+                  <i class="fa-solid fa-check"></i> Completed
+                </span>
+                <span class="deployment-pill status-aws" title="Deployed on AWS EC2 Cloud">
+                  <i class="fa-brands fa-aws"></i> AWS EC2 Deployed
+                </span>
+              </div>
+
+              <h3 class="project-headline">PlayTown</h3>
+              <div class="project-subhead">Toy Store E-Commerce Website</div>
+              
+              <p class="project-summary">
+                A full-stack toy e-commerce website featuring user authentication, product catalog, shopping cart, order management, and payment integration, deployed on Amazon Web Services (AWS EC2).
+              </p>
+
+              <div class="project-highlights">
+                <h4 class="highlights-title"><i class="fa-solid fa-list-check"></i> Key Implementations:</h4>
+                <ul class="highlights-list">
+                  <li>Full customer lifecycle: account registration, product discovery, shopping cart, and order placement.</li>
+                  <li>Relational MySQL schema modeling product categories, customer records, and checkout logs.</li>
+                  <li>Configured and deployed on cloud infrastructure using an <strong>AWS EC2</strong> virtual compute instance.</li>
+                </ul>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tech-pills">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">HTML5/CSS3</span>
+                  <span class="tech-tag">AWS EC2</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Kalyanysnair/Playtown" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <i class="fa-brands fa-github"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: SwiftAid (Healthcare Ambulance Booking with AWS EC2 Deployment) -->
+          <article class="project-card-editorial">
+            <div class="project-header-graphic graphic-swiftaid">
+              <div class="graphic-badge"><i class="fa-solid fa-truck-medical"></i> Healthcare Transit</div>
+            </div>
+
+            <div class="project-details-wrapper">
+              <div class="project-meta-top">
+                <span class="status-pill status-completed">
+                  <i class="fa-solid fa-check"></i> Completed
+                </span>
+                <span class="deployment-pill status-aws" title="Deployed on AWS EC2 Cloud">
+                  <i class="fa-brands fa-aws"></i> AWS EC2 Deployed
+                </span>
+              </div>
+
+              <h3 class="project-headline">SwiftAid</h3>
+              <div class="project-subhead">Ambulance Booking System</div>
+              
+              <p class="project-summary">
+                A web-based ambulance booking platform supporting emergency and scheduled bookings, user authentication, and driver-related coordination workflows, deployed on Amazon Web Services (AWS EC2).
+              </p>
+
+              <div class="project-highlights">
+                <h4 class="highlights-title"><i class="fa-solid fa-list-check"></i> Key Implementations:</h4>
+                <ul class="highlights-list">
+                  <li>Facilitates emergency and scheduled healthcare transport bookings with rapid incident confirmation.</li>
+                  <li>Multi-role portal with dedicated interfaces for patients, ambulance drivers, and dispatch administrators.</li>
+                  <li>MySQL-driven audit log capturing trip details, vehicle allocation, and driver dispatch records.</li>
+                </ul>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tech-pills">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">AWS EC2</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Kalyanysnair/SwiftAid_Project" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <i class="fa-brands fa-github"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Luminah (Fashion Magazine Portal - WordPress CMS & Elementor) -->
+          <article class="project-card-editorial project-card-cms">
+            <div class="project-header-graphic graphic-luminah">
+              <div class="graphic-badge"><i class="fa-solid fa-newspaper"></i> Fashion Magazine Portal</div>
+            </div>
+
+            <div class="project-details-wrapper">
+              <div class="project-meta-top">
+                <span class="status-pill status-completed">
+                  <i class="fa-solid fa-check"></i> Completed
+                </span>
+                <span class="deployment-pill status-cms" title="CMS Portal Architecture">
+                  <i class="fa-brands fa-wordpress"></i> WordPress &amp; Elementor
+                </span>
+              </div>
+
+              <h3 class="project-headline">Luminah</h3>
+              <div class="project-subhead">Fashion Magazine Portal</div>
+              
+              <p class="project-summary">
+                A fashion magazine-style web portal developed using WordPress and Elementor, with structured content presentation and separate administrator and user roles.
+              </p>
+
+              <div class="project-highlights">
+                <h4 class="highlights-title"><i class="fa-solid fa-list-check"></i> Key Implementations:</h4>
+                <ul class="highlights-list">
+                  <li>WordPress CMS development with custom editorial architecture tailored for lifestyle and fashion journalism.</li>
+                  <li>Elementor-based visual layout delivering responsive typography, editorial grids, and visual storytelling.</li>
+                  <li>Content management workflows with categorized articles, featured editorials, and structured media assets.</li>
+                  <li>Role-based access control with discrete privileges for editorial administrators and readers.</li>
+                </ul>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tech-pills">
+                  <span class="tech-tag">WordPress</span>
+                  <span class="tech-tag">Elementor CMS</span>
+                  <span class="tech-tag">Content Management</span>
+                  <span class="tech-tag">Editorial Design</span>
+                  <span class="tech-tag">RBAC</span>
+                </div>
+                <div class="project-links">
+                  <span class="project-cms-badge"><i class="fa-solid fa-feather-pointed"></i> Editorial CMS Project</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS SECTION (EXPANDED & CURATED) ================= -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Continuous Learning &amp; Credentials</span>
+          <h2 class="section-title">Certifications &amp; Training</h2>
+          <div class="section-title-bar"></div>
+          <p class="section-subtitle">
+            Curated selection of technical credentials, professional certifications, knowledge badges, and specialized training across cloud, development, databases, security, and AI.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="cert-filter-nav">
+          <button class="cert-tab-btn active" data-filter="all">All Credentials (38)</button>
+          <button class="cert-tab-btn" data-filter="cloud">Cloud Computing &amp; AWS (15)</button>
+          <button class="cert-tab-btn" data-filter="programming">Programming &amp; Web (6)</button>
+          <button class="cert-tab-btn" data-filter="database">Databases &amp; Engineering (7)</button>
+          <button class="cert-tab-btn" data-filter="security">Cybersecurity &amp; Networking (7)</button>
+          <button class="cert-tab-btn" data-filter="ai">AI &amp; Emerging Tech (3)</button>
+        </div>
+
+        <!-- Curated Certifications Grid -->
+        <div class="certifications-curated-grid" id="cert-grid">
+          
+          <!-- === A. CLOUD COMPUTING & AWS === -->
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-solid fa-award"></i> Professional Course</span>
+              <span class="cert-date-tag">Oct 25, 2026</span>
+            </div>
+            <h4 class="cert-title">AWS Cloud Practitioner Essentials</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Cloud Infrastructure &amp; Core Services</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-badge"><i class="fa-solid fa-certificate"></i> Knowledge Badge</span>
+              <span class="cert-date-tag">Oct 2026</span>
+            </div>
+            <h4 class="cert-title">AWS Cloud Essentials – Knowledge Badge</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">AWS Cloud Architecture Foundations</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-book-open"></i> Technical Training</span>
+              <span class="cert-date-tag">Oct 25, 2026</span>
+            </div>
+            <h4 class="cert-title">AWS Foundations: Getting Started with AWS Cloud Essentials</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Cloud Concepts &amp; Economics</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-server"></i> Hands-on Labs</span>
+              <span class="cert-date-tag">Oct 26, 2026</span>
+            </div>
+            <h4 class="cert-title">Cloud Essentials - Knowledge Badge Readiness Path (includes Labs)</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Hands-on Cloud Labs &amp; Workflows</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-microchip"></i> Compute</span>
+              <span class="cert-date-tag">Oct 26, 2026</span>
+            </div>
+            <h4 class="cert-title">Introduction to Amazon EC2</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Virtual Compute Instances &amp; Scaling</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-box-archive"></i> Storage</span>
+              <span class="cert-date-tag">Oct 26, 2026</span>
+            </div>
+            <h4 class="cert-title">Introduction to Amazon Simple Storage Service (S3)</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Cloud Object Storage &amp; Buckets</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-network-wired"></i> Networking</span>
+              <span class="cert-date-tag">Oct 26, 2026</span>
+            </div>
+            <h4 class="cert-title">Introduction to Amazon Virtual Private Cloud (VPC)</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Subnets, Gateways &amp; Cloud Isolation</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-key"></i> Security</span>
+              <span class="cert-date-tag">Oct 26, 2026</span>
+            </div>
+            <h4 class="cert-title">Introduction to AWS Identity and Access Management (IAM)</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Policies, Roles &amp; Access Governance</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-globe"></i> Edge &amp; CDN</span>
+              <span class="cert-date-tag">Oct 26, 2026</span>
+            </div>
+            <h4 class="cert-title">Introduction to Amazon CloudFront</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Content Delivery Networks &amp; Caching</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-coins"></i> FinOps</span>
+              <span class="cert-date-tag">Oct 25, 2026</span>
+            </div>
+            <h4 class="cert-title">AWS Billing and Cost Management</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Budgeting &amp; Resource Allocation</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-briefcase"></i> Cloud Strategy</span>
+              <span class="cert-date-tag">Oct 25, 2026</span>
+            </div>
+            <h4 class="cert-title">Getting Started with Cloud Acquisition</h4>
+            <div class="cert-org"><i class="fa-brands fa-aws"></i> Amazon Web Services (AWS)</div>
+            <div class="cert-meta-tag">Procurement &amp; Migration Planning</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-cubes"></i> CompTIA</span>
+              <span class="cert-date-tag">Feb 15, 2026</span>
+            </div>
+            <h4 class="cert-title">CompTIA Cloud+: Containers and Virtualization</h4>
+            <div class="cert-org"><i class="fa-solid fa-shield-halved"></i> CompTIA</div>
+            <div class="cert-meta-tag">Hypervisors &amp; Containerized Workloads</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-microchip"></i> CompTIA</span>
+              <span class="cert-date-tag">Feb 15, 2026</span>
+            </div>
+            <h4 class="cert-title">CompTIA A+ Core 1: Cloud Computing Concepts</h4>
+            <div class="cert-org"><i class="fa-solid fa-shield-halved"></i> CompTIA</div>
+            <div class="cert-meta-tag">IaaS, PaaS, SaaS Architectural Models</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-cloud"></i> Course</span>
+              <span class="cert-date-tag">Coursera</span>
+            </div>
+            <h4 class="cert-title">Cloud Computing Basics (Cloud 101)</h4>
+            <div class="cert-org"><i class="fa-solid fa-graduation-cap"></i> Coursera</div>
+            <div class="cert-meta-tag">Distributed Systems &amp; High Availability</div>
+          </div>
+
+          <div class="cert-item-card" data-category="cloud">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-cloud"></i> Course</span>
+              <span class="cert-date-tag">Coursera</span>
+            </div>
+            <h4 class="cert-title">How to Get Into Cloud Computing</h4>
+            <div class="cert-org"><i class="fa-solid fa-graduation-cap"></i> Coursera</div>
+            <div class="cert-meta-tag">Industry Practices &amp; Toolchains</div>
+          </div>
+
+          <!-- === B. PROGRAMMING & WEB DEVELOPMENT === -->
+          <div class="cert-item-card" data-category="programming">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-solid fa-award"></i> Professional Credential</span>
+              <span class="cert-date-tag">Sep 6, 2025</span>
+            </div>
+            <h4 class="cert-title">Java Programming Fundamentals</h4>
+            <div class="cert-org"><i class="fa-solid fa-laptop-code"></i> Wingspan</div>
+            <div class="cert-meta-tag">Core Java &amp; OOP Foundations</div>
+          </div>
+
+          <div class="cert-item-card" data-category="programming">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-code"></i> Course</span>
+              <span class="cert-date-tag">Course Completion</span>
+            </div>
+            <h4 class="cert-title">Learn PHP and MySQL for Web Application Development</h4>
+            <div class="cert-org"><i class="fa-brands fa-php"></i> Web Development Series</div>
+            <div class="cert-meta-tag">Server-side Scripting &amp; CRUD Systems</div>
+          </div>
+
+          <div class="cert-item-card" data-category="programming">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-network-wired"></i> Course</span>
+              <span class="cert-date-tag">Course Completion</span>
+            </div>
+            <h4 class="cert-title">Build a Robust RESTful API with PHP 8</h4>
+            <div class="cert-org"><i class="fa-brands fa-php"></i> API Development</div>
+            <div class="cert-meta-tag">REST Endpoints, JSON &amp; Middleware</div>
+          </div>
+
+          <div class="cert-item-card" data-category="programming">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-code"></i> Course</span>
+              <span class="cert-date-tag">Course Completion</span>
+            </div>
+            <h4 class="cert-title">JavaScript and PHP Programming Complete Course</h4>
+            <div class="cert-org"><i class="fa-brands fa-js"></i> Full-Stack Program</div>
+            <div class="cert-meta-tag">Client &amp; Server-Side Programming</div>
+          </div>
+
+          <div class="cert-item-card" data-category="programming">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-layer-group"></i> Project Lab</span>
+              <span class="cert-date-tag">Practical Training</span>
+            </div>
+            <h4 class="cert-title">60 HTML CSS JS Projects</h4>
+            <div class="cert-org"><i class="fa-brands fa-html5"></i> Web Project Lab</div>
+            <div class="cert-meta-tag">Interactive UI &amp; Component Design</div>
+          </div>
+
+          <div class="cert-item-card" data-category="programming">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-brands fa-wordpress"></i> CMS</span>
+              <span class="cert-date-tag">Course Completion</span>
+            </div>
+            <h4 class="cert-title">WordPress Web Development for Absolute Beginners</h4>
+            <div class="cert-org"><i class="fa-brands fa-wordpress"></i> CMS Engineering</div>
+            <div class="cert-meta-tag">Theme Structure &amp; Page Building</div>
+          </div>
+
+          <!-- === C. DATABASE & SOFTWARE DEVELOPMENT === -->
+          <div class="cert-item-card" data-category="database">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-solid fa-database"></i> Database Spec</span>
+              <span class="cert-date-tag">Feb 17, 2026</span>
+            </div>
+            <h4 class="cert-title">Database Structures and Management with MySQL</h4>
+            <div class="cert-org"><i class="fa-solid fa-graduation-cap"></i> Coursera</div>
+            <div class="cert-meta-tag">Relational Schemas, Indexing &amp; Queries</div>
+          </div>
+
+          <div class="cert-item-card" data-category="database">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-database"></i> Course</span>
+              <span class="cert-date-tag">Feb 17, 2026</span>
+            </div>
+            <h4 class="cert-title">Introduction to Databases</h4>
+            <div class="cert-org"><i class="fa-solid fa-graduation-cap"></i> Coursera</div>
+            <div class="cert-meta-tag">Entity-Relationship Modeling &amp; Normalization</div>
+          </div>
+
+          <div class="cert-item-card" data-category="database">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-table"></i> Course</span>
+              <span class="cert-date-tag">Course Completion</span>
+            </div>
+            <h4 class="cert-title">Database Management Systems (RDBMS) &amp; Microsoft Fabric SQL</h4>
+            <div class="cert-org"><i class="fa-solid fa-server"></i> Database Training</div>
+            <div class="cert-meta-tag">Modern RDBMS &amp; Cloud SQL Analytics</div>
+          </div>
+
+          <div class="cert-item-card" data-category="database">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-terminal"></i> Course</span>
+              <span class="cert-date-tag">Course Completion</span>
+            </div>
+            <h4 class="cert-title">Learn SQL in 3 Hours</h4>
+            <div class="cert-org"><i class="fa-solid fa-database"></i> Practical SQL</div>
+            <div class="cert-meta-tag">Aggregation, Joins &amp; Complex Filters</div>
+          </div>
+
+          <div class="cert-item-card" data-category="database">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-brands fa-google"></i> Google Certificate</span>
+              <span class="cert-date-tag">Feb 17, 2026</span>
+            </div>
+            <h4 class="cert-title">Tools of the Trade: Linux and SQL</h4>
+            <div class="cert-org"><i class="fa-brands fa-google"></i> Google &amp; Coursera</div>
+            <div class="cert-meta-tag">Bash Scripting, Linux Admin &amp; Data Querying</div>
+          </div>
+
+          <div class="cert-item-card" data-category="database">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-infinity"></i> DevOps</span>
+              <span class="cert-date-tag">Jul 19, 2025</span>
+            </div>
+            <h4 class="cert-title">The DevOps Essentials – The Handbook</h4>
+            <div class="cert-org"><i class="fa-solid fa-laptop-code"></i> Wingspan</div>
+            <div class="cert-meta-tag">CI/CD, Build Systems &amp; Reliability</div>
+          </div>
+
+          <div class="cert-item-card" data-category="database">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-solid fa-award"></i> Industry Credential</span>
+              <span class="cert-date-tag">Feb 27, 2025</span>
+            </div>
+            <h4 class="cert-title">Scrum Fundamentals Certified (SFC)</h4>
+            <div class="cert-org"><i class="fa-solid fa-arrows-spin"></i> SCRUMstudy</div>
+            <div class="cert-meta-tag">Agile Sprint Cadence, Backlogs &amp; Ceremonies</div>
+          </div>
+
+          <!-- === D. CYBERSECURITY & NETWORKING === -->
+          <div class="cert-item-card" data-category="security">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-brands fa-google"></i> Google Spec</span>
+              <span class="cert-date-tag">Feb 6, 2026</span>
+            </div>
+            <h4 class="cert-title">Foundations of Cybersecurity</h4>
+            <div class="cert-org"><i class="fa-brands fa-google"></i> Google &amp; Coursera</div>
+            <div class="cert-meta-tag">CIA Triad, Security Principles &amp; Defense</div>
+          </div>
+
+          <div class="cert-item-card" data-category="security">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-brands fa-google"></i> Google Spec</span>
+              <span class="cert-date-tag">Feb 18, 2026</span>
+            </div>
+            <h4 class="cert-title">Assets, Threats, and Vulnerabilities</h4>
+            <div class="cert-org"><i class="fa-brands fa-google"></i> Google &amp; Coursera</div>
+            <div class="cert-meta-tag">Threat Vectors, Risk Assessment &amp; Controls</div>
+          </div>
+
+          <div class="cert-item-card" data-category="security">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-brands fa-google"></i> Google Spec</span>
+              <span class="cert-date-tag">Feb 17, 2026</span>
+            </div>
+            <h4 class="cert-title">Play It Safe: Manage Security Risks</h4>
+            <div class="cert-org"><i class="fa-brands fa-google"></i> Google &amp; Coursera</div>
+            <div class="cert-meta-tag">Security Frameworks &amp; NIST Controls</div>
+          </div>
+
+          <div class="cert-item-card" data-category="security">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-brands fa-google"></i> Google Spec</span>
+              <span class="cert-date-tag">Feb 18, 2026</span>
+            </div>
+            <h4 class="cert-title">Sound the Alarm: Detection and Response</h4>
+            <div class="cert-org"><i class="fa-brands fa-google"></i> Google &amp; Coursera</div>
+            <div class="cert-meta-tag">SIEM Logs, Packet Analysis &amp; Incident Triage</div>
+          </div>
+
+          <div class="cert-item-card" data-category="security">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-brands fa-google"></i> Google Spec</span>
+              <span class="cert-date-tag">Feb 17, 2026</span>
+            </div>
+            <h4 class="cert-title">Connect and Protect: Networks and Network Security</h4>
+            <div class="cert-org"><i class="fa-brands fa-google"></i> Google &amp; Coursera</div>
+            <div class="cert-meta-tag">TCP/IP, Firewalls, Routing &amp; Hardening</div>
+          </div>
+
+          <div class="cert-item-card" data-category="security">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-brands fa-google"></i> Google Spec</span>
+              <span class="cert-date-tag">Feb 22, 2026</span>
+            </div>
+            <h4 class="cert-title">Automate Cybersecurity Tasks with Python</h4>
+            <div class="cert-org"><i class="fa-brands fa-google"></i> Google &amp; Coursera</div>
+            <div class="cert-meta-tag">Python Scripting for Security Automation</div>
+          </div>
+
+          <div class="cert-item-card" data-category="security">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-solid fa-network-wired"></i> Cisco Academy</span>
+              <span class="cert-date-tag">Mar 4, 2026</span>
+            </div>
+            <h4 class="cert-title">Getting Started with Cisco Packet Tracer</h4>
+            <div class="cert-org"><i class="fa-solid fa-server"></i> Cisco Networking Academy</div>
+            <div class="cert-meta-tag">Network Topologies &amp; Protocol Simulation</div>
+          </div>
+
+          <!-- === E. AI, EMERGING TECHNOLOGY & OTHER LEARNING === -->
+          <div class="cert-item-card" data-category="ai">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-prof"><i class="fa-solid fa-award"></i> Industry Certification</span>
+              <span class="cert-date-tag">2025</span>
+            </div>
+            <h4 class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h4>
+            <div class="cert-org"><i class="fa-solid fa-brain"></i> Oracle University</div>
+            <div class="cert-meta-tag">Generative AI, LLMs &amp; OCI AI Services</div>
+          </div>
+
+          <div class="cert-item-card" data-category="ai">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-solid fa-microchip"></i> Hardware &amp; IoT</span>
+              <span class="cert-date-tag">Oct 26, 2026</span>
+            </div>
+            <h4 class="cert-title">IoT Raspberry Pi with Projects</h4>
+            <div class="cert-org"><i class="fa-solid fa-laptop-code"></i> Wingspan</div>
+            <div class="cert-meta-tag">Embedded Sensors, GPIO &amp; IoT Architecture</div>
+          </div>
+
+          <div class="cert-item-card" data-category="ai">
+            <div class="cert-card-header">
+              <span class="cert-type-pill type-course"><i class="fa-brands fa-ethereum"></i> Blockchain Spec</span>
+              <span class="cert-date-tag">2024–2025</span>
+            </div>
+            <h4 class="cert-title">Blockchain Developer Training &amp; Smart Contract Engineering</h4>
+            <div class="cert-org"><i class="fa-solid fa-cube"></i> Kerala Blockchain Academy</div>
+            <div class="cert-meta-tag">Solidity, Hardhat &amp; Decentralized Applications</div>
+          </div>
+
+        </div>
+
+        <!-- Filter Count Footer Indicator -->
+        <div class="cert-grid-footer">
+          <span class="cert-count-text" id="cert-count-indicator">Showing all 38 curated certifications and training credentials</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS AND ACTIVITIES SECTION (WITH SIH) ================= -->
+    <section class="section section-alt" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Milestones &amp; Engagement</span>
+          <h2 class="section-title">Achievements &amp; Activities</h2>
+          <div class="section-title-bar"></div>
+        </div>
+
+        <div class="achievements-grid">
+          
+          <!-- Item 1: Smart India Hackathon (SIH) 2025 - Institution Level Winner -->
+          <div class="achievement-card sih-highlight-card">
+            <div class="achievement-icon-box sih-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="achievement-body">
+              <div class="achievement-status-badge sih-badge">
+                <i class="fa-solid fa-medal"></i> Hackathon Winner
+              </div>
+              <h3 class="achievement-title">Smart India Hackathon 2025 – Institution Level Winner</h3>
+              <p class="achievement-description">
+                Awarded <strong>Institution Level Winner</strong> in the internal college selection rounds of the Smart India Hackathon (SIH 2025) at Amal Jyothi College of Engineering, evaluated across technical innovation, architectural feasibility, and prototype execution.
+              </p>
+              <div class="achievement-verified-note">
+                <i class="fa-solid fa-circle-check"></i> Verified via institutional certificate: <em>SIH-INSTITUTION LEVEL WINNER</em>.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: I2U Funded Project -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="achievement-body">
+              <div class="achievement-category">Grant &amp; Innovation Funding</div>
+              <h3 class="achievement-title">I2U (Idea to Utility) Funded Project Holder — Phase 2</h3>
+              <p class="achievement-description">
+                Awarded college funding support in Phase 2 for an interdisciplinary engineering project, validating innovation, technical viability, and practical utility under institutional review.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Patent Application in Preparation -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div class="achievement-body">
+              <div class="achievement-status-badge patent-prep-badge">
+                <i class="fa-solid fa-pen-ruler"></i> Patent Application in Preparation
+              </div>
+              <h3 class="achievement-title">Self-Cleaning Washbasin for Public Use</h3>
+              <p class="achievement-description">
+                Active patent documentation and prototype specification in preparation for an automated, hygiene-optimized self-cleaning washbasin system engineered for public sanitation infrastructure.
+              </p>
+              <div class="patent-disclaimer">
+                <i class="fa-solid fa-circle-info"></i> Note: Currently in patent drafting &amp; preparation phase (not a granted patent).
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: NASA Space Apps Challenge -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <div class="achievement-body">
+              <div class="achievement-category">Global Hackathon Organization</div>
+              <h3 class="achievement-title">NASA Space Apps Challenge 2024 &amp; 2025</h3>
+              <p class="achievement-description">
+                Contributed as an active organizer and volunteer across consecutive editions: served as a member of the <strong>Technical Committee (2024)</strong> managing event infrastructure, and the <strong>Finance Team (2025)</strong> managing resource allocations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5: IPR Cell -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div class="achievement-body">
+              <div class="achievement-category">Institutional Service</div>
+              <h3 class="achievement-title">Intellectual Property Rights (IPR) Cell</h3>
+              <p class="achievement-description">
+                Volunteer and student representative supporting intellectual property awareness, patent literacy workshops, and institutional documentation guidance for student innovators.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION SECTION ================= -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Qualifications</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-title-bar"></div>
+        </div>
+
+        <div class="education-grid">
+          <!-- Degree 1: Integrated MCA -->
+          <div class="education-item-card primary-edu">
+            <div class="edu-card-top">
+              <div class="edu-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="edu-period">2022 – 2027</div>
+            </div>
+            <h3 class="edu-degree">Integrated Master of Computer Applications (MCA)</h3>
+            <div class="edu-institution-name">
+              Amal Jyothi College of Engineering (Autonomous)
+            </div>
+            <div class="edu-university">
+              APJ Abdul Kalam Technological University
+            </div>
+            <div class="edu-score-pill">
+              <i class="fa-solid fa-star"></i> CGPA: <strong>9.1</strong>
+            </div>
+            <p class="edu-summary">
+              Curriculum covering advanced data structures, full-stack web engineering, database architecture, algorithms, cloud systems, and applied artificial intelligence.
+            </p>
+          </div>
+
+          <!-- Degree 2: Class XII -->
+          <div class="education-item-card">
+            <div class="edu-card-top">
+              <div class="edu-icon">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div class="edu-period">2022</div>
+            </div>
+            <h3 class="edu-degree">Class XII (Higher Secondary)</h3>
+            <div class="edu-institution-name">NSS HSS Karukachal</div>
+            <div class="edu-university">Kerala State Board</div>
+            <div class="edu-score-pill">
+              <i class="fa-solid fa-chart-line"></i> Score: <strong>94.75%</strong>
+            </div>
+            <p class="edu-summary">
+              Higher secondary education with a rigorous focus on Mathematics, Physics, and foundational computing sciences.
+            </p>
+          </div>
+
+          <!-- Degree 3: Class X -->
+          <div class="education-item-card">
+            <div class="edu-card-top">
+              <div class="edu-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <div class="edu-period">2020</div>
+            </div>
+            <h3 class="edu-degree">Class X (Secondary School)</h3>
+            <div class="edu-institution-name">Vidyananda Vidya Bhavan</div>
+            <div class="edu-university">Central Board of Secondary Education (CBSE)</div>
+            <div class="edu-score-pill">
+              <i class="fa-solid fa-chart-line"></i> Score: <strong>85.6%</strong>
+            </div>
+            <p class="edu-summary">
+              Secondary education establishing a strong quantitative foundation in science, mathematics, and English communication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+          <div class="section-title-bar"></div>
+          <p class="section-subtitle">
+            Interested in discussing entry-level technology roles, software development opportunities, or project collaborations? Reach out directly or send a message below.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          <!-- Left Column: Contact Cards & Info -->
+          <div class="contact-info-panel">
+            <h3 class="panel-heading">Let's Connect</h3>
+            <p class="panel-intro">
+              I am open to software development opportunities, technical inquiries, and entry-level IT roles. I look forward to hearing from you!
+            </p>
+
+            <div class="contact-details-list">
+              <!-- Verified Primary Email with One-Click Copy -->
+              <div class="contact-detail-card">
+                <div class="detail-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="detail-info">
+                  <span class="detail-label">Email</span>
+                  <a href="mailto:kalyanysnair.in@gmail.com" class="detail-value email-link" id="contact-email-link">
+                    kalyanysnair.in@gmail.com
+                  </a>
+                </div>
+                <button class="btn-copy-email" id="copy-email-btn" type="button" aria-label="Copy email address to clipboard" title="Copy to clipboard">
+                  <i class="fa-regular fa-copy"></i>
+                  <span class="copy-tooltip" id="copy-tooltip">Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-detail-card">
+                <div class="detail-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="detail-info">
+                  <span class="detail-label">Phone</span>
+                  <a href="tel:+919778237180" class="detail-value">
+                    +91 9778237180
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-detail-card">
+                <div class="detail-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="detail-info">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Kottayam, Kerala, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Social Links -->
+            <div class="contact-social-box">
+              <span class="social-box-heading">Professional Profiles:</span>
+              <div class="social-pills-row">
+                <a href="https://linkedin.com/in/kalyanysnair" target="_blank" rel="noopener noreferrer"
+                  class="social-pill-btn" aria-label="LinkedIn Profile">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Kalyanysnair" target="_blank" rel="noopener noreferrer"
+                  class="social-pill-btn" aria-label="GitHub Profile">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="assets/resume/Kalyany_S_Nair_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                  download="Kalyany_S_Nair_Resume.pdf" class="social-pill-btn" aria-label="Download Resume PDF">
+                  <i class="fa-solid fa-file-arrow-down"></i>
+                  <span>Resume</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <div class="form-panel-header">
+              <h3 class="form-heading"><i class="fa-regular fa-paper-plane"></i> Send a Direct Message</h3>
+              <p class="form-caption">Fill in your information and I will respond promptly.</p>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Name -->
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user input-icon"></i>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Sarah Jenkins"
+                    required autocomplete="name">
+                </div>
+                <span class="form-error" id="name-error">Please enter your full name.</span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-envelope input-icon"></i>
+                  <input type="email" id="form-email" name="email" class="form-input"
+                    placeholder="e.g. sarah@example.com" required autocomplete="email">
+                </div>
+                <span class="form-error" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Subject -->
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-bookmark input-icon"></i>
+                  <input type="text" id="form-subject" name="subject" class="form-input"
+                    placeholder="e.g. Technology Opportunity / Software Role" required>
+                </div>
+                <span class="form-error" id="subject-error">Please specify a subject for your message.</span>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message <span class="required">*</span></label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-regular fa-message input-icon textarea-icon"></i>
+                  <textarea id="form-message" name="message" class="form-textarea" rows="5"
+                    placeholder="Hello Kalyany, I would like to discuss..." required></textarea>
+                </div>
+                <span class="form-error" id="message-error">Please enter a message (at least 15 characters).</span>
+              </div>
+
+              <!-- Form Status Banner -->
+              <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span class="btn-text">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </span>
+                <span class="btn-spinner" aria-hidden="true">
+                  <i class="fa-solid fa-circle-notch fa-spin"></i>
+                </span>
+              </button>
+
+              <div class="form-fallback-note">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Direct client fallback: If automated delivery is not configured, clicking send opens your default mail client directly to <strong>kalyanysnair.in@gmail.com</strong>.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>&copy; 2026 Kalyany S Nair. All rights reserved.</p>
+      <div class="footer-left">
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-symbol">&lt;</span>Kalyany<span class="logo-accent">.dev</span><span class="logo-symbol"> /&gt;</span>
+        </a>
+        <p class="footer-tagline">
+          Crafted with semantic HTML5, modern CSS3, and vanilla JavaScript.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-right">
+        <p class="copyright">&copy; 2026 Kalyany S Nair. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Kalyanysnair" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/kalyanysnair" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:kalyanysnair.in@gmail.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- --- BACK TO TOP --- -->
-  <div class="back-to-top" id="back-to-top" aria-label="Scroll to Top">
-    <i class="fa-solid fa-chevron-up"></i>
-  </div>
+  <!-- ================= BACK TO TOP BUTTON ================= -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top of page" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-  <!-- Javascript Logic -->
-  <script src="index.js"></script>
+  <!-- Core JavaScript -->
+  <script src="index.js?v=3.0"></script>
 </body>
+
 </html>
