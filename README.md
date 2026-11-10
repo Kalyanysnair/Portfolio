@@ -41,10 +41,10 @@ Portfolio/
 
 ## 🌟 Key Highlights & Design Innovations
 
-1. **Distinctive & Personal Landing Page Architecture:**
-   - Moves away from generic AI-generated split-screen templates and floating code editor cards.
-   - Re-imagines the portfolio's original planetary identity with an **orbital celestial stage**: an animated aperture framing `assets/hero-bg.png` surrounded by rotating technical coordinate rings, live telemetry indicators, and orbiting competency nodes (`TypeScript`, `FastAPI`, `PostgreSQL`, `Spring Boot`).
-   - Features a real-time availability status pill (`Open to IT & Tech Roles 2026/27`), engineering coordinate tags, and a direct-connect email action with instant clipboard feedback.
+1. **Clean, Human-First Editorial Landing Page:**
+   - Designed to eliminate artificial "AI-generated" sci-fi tropes, replacing spinning orbital rings, fake telemetry ribbons, and code-bracket gimmicks with an authentic, human developer presentation.
+   - Features a clean status pill (`Integrated MCA • Amal Jyothi College of Engineering • CGPA 9.1`), clear typography, and a beautifully framed developer showcase card (`kalyany-profile.dev`) with verified academic and hackathon credentials.
+   - Streamlined actions: direct project navigation, one-click PDF resume download, clean social links, and an unobtrusive email copy button.
 
 2. **Broad & Versatile Professional Positioning:**
    - Structured for diverse technology opportunities across the IT industry: Software Development, Full-Stack Development, Frontend & Backend Development, Application Development, Database Engineering, Software Testing & QA, AI-integrated systems, and Graduate Engineer Trainee roles.
@@ -52,9 +52,10 @@ Portfolio/
    - Statement: *"Building practical technology solutions through software development, modern web technologies, databases, and emerging AI applications."*
    - Avoids pigeonholing into a single job title or niche, while demonstrating concrete mastery across core CS disciplines.
 
-3. **5 Editorial Featured Projects:**
+3. **6 Editorial Featured Projects:**
    - **RetailSphere AI (Flagship Showcase):** Intelligent furniture retail and custom manufacturing platform featuring real UI screenshots, Vercel deployment badge, FastAPI backend, PostgreSQL, and LLM/RAG integration.
    - **Arcade:** Next.js and Spring Boot e-learning platform in active development, featuring verified game/course artwork and dual-architecture tags.
+   - **Sweety (Blood Glucose Tracking & Reporting):** Full-stack healthcare web application built with React.js (Vite), Node.js, Express.js, and PostgreSQL featuring JWT authentication, input validation, and daily/monthly analytical reports.
    - **PlayTown:** Full-stack toy e-commerce application deployed on AWS EC2 with PHP, MySQL, product catalog, cart mechanics, and role-based access.
    - **SwiftAid:** Web-based emergency and scheduled ambulance dispatch platform deployed on AWS EC2 with GPS tracking and automated hospital alerting.
    - **Luminah (Fashion Magazine CMS):** Dynamic digital magazine portal engineered with WordPress and Elementor CMS, user/admin roles, structured content taxonomy, and responsive reading layouts (no fabricated repository).
@@ -76,8 +77,10 @@ Portfolio/
    - **NASA Space Apps Challenge:** Local lead volunteer and participant (2024 & 2025).
    - **Intellectual Property Rights (IPR) Cell:** Active departmental volunteer and representative.
 
-6. **Theme & Contact Systems:**
-   - Dark theme as the refined primary default (`#090d16`) with seamless light-mode toggle.
+6. **Refined Light Theme as Primary Default:**
+   - Designed with an editorial, crisp light theme (`#ffffff` canvas with deep `#0f172a` text and royal blue accents) as the primary default.
+   - Includes a one-click theme switcher to toggle into dark mode.
+   - Fully optimized contrast across all cards, tags, and category pills in both light and dark modes.
    - Primary verified email: `kalyanysnair.in@gmail.com` integrated into one-click copy buttons, header pills, and direct mailto handlers.
    - Robust contact form with live input validation and optional EmailJS integration.
 
@@ -107,19 +110,6 @@ If you would like the form to send emails directly in the background without ope
    ```html
    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
    ```
-
----
-
-## 📄 Updating Your Resume
-
-The resume download buttons link directly to:
-```text
-assets/resume/Kalyany_S_Nair_Resume.pdf
-```
-Whenever you have an updated version of your resume:
-1. Export your latest resume as a PDF.
-2. Rename the file to `Kalyany_S_Nair_Resume.pdf`.
-3. Replace the existing file inside `assets/resume/`.
 
 ---
 

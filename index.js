@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. THEME TOGGLE (DARK THEME PRIMARY DEFAULT)
+   1. THEME TOGGLE (LIGHT THEME PRIMARY DEFAULT)
    ========================================================================== */
 function initThemeToggle() {
   const themeBtn = document.getElementById('theme-btn');
@@ -37,15 +37,15 @@ function initThemeToggle() {
   
   if (!themeBtn || !themeIcon) return;
 
-  // Retrieve saved theme or default strictly to dark mode
-  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  // Retrieve saved theme or default strictly to light mode
+  const savedTheme = localStorage.getItem('portfolio-theme-v3') || 'light';
   applyTheme(savedTheme);
 
   themeBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
     applyTheme(nextTheme);
-    localStorage.setItem('portfolio-theme', nextTheme);
+    localStorage.setItem('portfolio-theme-v3', nextTheme);
   });
 
   function applyTheme(theme) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -21,11 +21,11 @@
   <meta name="twitter:title" content="Kalyany S Nair | Technology Enthusiast &amp; Software Developer">
   <meta name="twitter:description"
     content="Building practical technology solutions through software development, modern web technologies, databases, and emerging AI applications.">
-  <meta name="theme-color" content="#090d16">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Favicon (Crisp SVG Terminal Icon) -->
   <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%236366f1'/><path d='M8 11l5 5-5 5M15 21h9' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232563eb'/><path d='M8 11l5 5-5 5M15 21h9' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
   <!-- Google Fonts: Outfit, Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="index.css?v=3.0">
+  <link rel="stylesheet" href="index.css?v=3.1">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
   <header class="header" id="header">
     <div class="container nav-container">
       <a href="#home" class="logo" aria-label="Kalyany S Nair Homepage">
-        <span class="logo-symbol">&lt;</span>Kalyany<span class="logo-accent">.dev</span><span class="logo-symbol"> /&gt;</span>
+        <span class="logo-text">Kalyany</span><span class="logo-accent">.dev</span>
       </a>
 
       <nav class="nav-menu" id="nav-menu">
@@ -65,16 +65,9 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Direct Resume Download in Header -->
-        <a href="assets/resume/Kalyany_S_Nair_Resume.pdf" class="btn btn-nav-resume"
-          download="Kalyany_S_Nair_Resume.pdf" target="_blank" rel="noopener noreferrer">
-          <i class="fa-solid fa-file-arrow-down"></i>
-          <span>Resume</span>
-        </a>
-
         <!-- Dark/Light Mode Switcher -->
-        <button class="theme-btn" id="theme-btn" aria-label="Switch between dark and light themes" title="Toggle Theme">
-          <i class="fa-solid fa-sun" id="theme-icon"></i>
+        <button class="theme-btn" id="theme-btn" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
 
         <!-- Mobile Menu Toggle Button -->
@@ -86,48 +79,27 @@
   </header>
 
   <main>
-    <!-- ================= REDESIGNED HERO LANDING PAGE ================= -->
+    <!-- ================= HUMAN-DESIGNED EDITORIAL HERO ================= -->
     <section class="hero" id="home">
-      <div class="hero-ambient-glow"></div>
-      <div class="container hero-composition">
-        
-        <!-- Top Telemetry & Location Ribbon -->
-        <div class="hero-telemetry-bar">
-          <div class="telemetry-item">
-            <span class="pulse-dot"></span>
-            <span class="telemetry-text">Open to Technology &amp; Software Opportunities</span>
-          </div>
-          <div class="telemetry-divider"></div>
-          <div class="telemetry-item location-item">
-            <i class="fa-solid fa-location-crosshairs"></i>
-            <span>Kottayam, Kerala, India</span>
-          </div>
-          <div class="telemetry-divider"></div>
-          <div class="telemetry-item edu-item">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>Amal Jyothi College of Engg • CGPA 9.1</span>
-          </div>
-        </div>
-
-        <!-- Main Hero Composition: Asymmetric Architectural Layout -->
+      <div class="container hero-container">
         <div class="hero-layout">
           
-          <!-- Left Column: Core Identity, Typography, and Action Clustered -->
-          <div class="hero-typography-block">
-            <div class="hero-intro-lead">
-              <span class="intro-greeting">Welcome to my space —</span>
-              <span class="intro-bracket">{</span>
-              <span class="intro-id">kalyany_s_nair</span>
-              <span class="intro-bracket">}</span>
+          <!-- Left Column: Personal Introduction & Actions -->
+          <div class="hero-content">
+            
+            <!-- Clean, Tasteful Status Pill -->
+            <div class="hero-status-pill">
+              <span class="status-indicator-dot"></span>
+              <span class="status-pill-text">Integrated MCA &bull; Amal Jyothi College of Engineering &bull; CGPA 9.1</span>
             </div>
 
             <h1 class="hero-title">
-              Hi, I'm <span class="gradient-text">Kalyany S Nair</span>
+              Hi, I'm <span class="hero-name-accent">Kalyany S Nair</span>
             </h1>
 
             <!-- Exact Requested Main Headline -->
             <h2 class="hero-headline">
-              Technology Enthusiast <span class="headline-sep">/</span> Software Developer <span class="headline-sep">/</span> Integrated MCA Student
+              Technology Enthusiast <span class="headline-divider">/</span> Software Developer <span class="headline-divider">/</span> Integrated MCA Student
             </h2>
 
             <!-- Exact Requested Alternative Supporting Statement -->
@@ -135,36 +107,31 @@
               Building practical technology solutions through software development, modern web technologies, databases, and emerging AI applications.
             </p>
 
-            <!-- Key Quick Badges -->
-            <div class="hero-quick-badges">
-              <span class="badge-chip"><i class="fa-solid fa-code"></i> Software &amp; Web</span>
-              <span class="badge-chip"><i class="fa-solid fa-database"></i> Database Systems</span>
-              <span class="badge-chip"><i class="fa-solid fa-vial-circle-check"></i> QA &amp; Testing</span>
-              <span class="badge-chip"><i class="fa-solid fa-cloud"></i> Cloud Deployment</span>
-              <span class="badge-chip"><i class="fa-solid fa-brain"></i> Applied AI</span>
+            <!-- Clean Core Focus Tags -->
+            <div class="hero-focus-tags">
+              <span class="focus-tag"><i class="fa-solid fa-code"></i> Full Stack</span>
+              <span class="focus-tag"><i class="fa-solid fa-server"></i> Backend APIs</span>
+              <span class="focus-tag"><i class="fa-solid fa-database"></i> Databases</span>
+              <span class="focus-tag"><i class="fa-solid fa-vial-circle-check"></i> QA &amp; Testing</span>
+              <span class="focus-tag"><i class="fa-solid fa-cloud"></i> AWS Cloud</span>
+              <span class="focus-tag"><i class="fa-solid fa-brain"></i> Applied AI</span>
             </div>
 
-            <!-- Action Buttons Cluster -->
+            <!-- Action Buttons -->
             <div class="hero-actions">
               <a href="#projects" class="btn btn-primary">
-                <i class="fa-solid fa-arrow-down-long"></i>
-                <span>Explore Projects (5)</span>
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Explore Projects (6)</span>
               </a>
-              <a href="assets/resume/Kalyany_S_Nair_Resume.pdf" class="btn btn-secondary"
-                download="Kalyany_S_Nair_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-file-arrow-down"></i>
-                <span>Download Resume</span>
-              </a>
-              <a href="#contact" class="btn btn-ghost">
-                <i class="fa-solid fa-paper-plane"></i>
-                <span>Contact Me</span>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Get in Touch</span>
               </a>
             </div>
 
             <!-- Social and Quick Copy Email Bar -->
             <div class="hero-connect-bar">
-              <span class="connect-label">Direct Connect:</span>
-              <div class="connect-links">
+              <div class="connect-social-group">
                 <a href="https://github.com/Kalyanysnair" target="_blank" rel="noopener noreferrer"
                   class="connect-icon-btn" aria-label="GitHub Profile" title="GitHub - Kalyanysnair">
                   <i class="fa-brands fa-github"></i>
@@ -177,85 +144,43 @@
                   title="Direct Email - kalyanysnair.in@gmail.com">
                   <i class="fa-solid fa-envelope"></i>
                 </a>
-                <button class="hero-copy-pill" id="hero-copy-email-btn" type="button" title="Copy email address">
-                  <i class="fa-regular fa-copy"></i>
-                  <span class="copy-email-text">kalyanysnair.in@gmail.com</span>
-                  <span class="hero-copy-tooltip" id="hero-copy-tooltip">Copied!</span>
-                </button>
+              </div>
+              <button class="hero-copy-pill" id="hero-copy-email-btn" type="button" title="Copy email address">
+                <i class="fa-regular fa-copy"></i>
+                <span class="copy-email-text">kalyanysnair.in@gmail.com</span>
+                <span class="hero-copy-tooltip" id="hero-copy-tooltip">Copied!</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Clean Editorial Visual Showcase -->
+          <div class="hero-visual-column">
+            <div class="hero-profile-card">
+              <div class="card-browser-bar">
+                <div class="browser-dots">
+                  <span class="b-dot dot-red"></span>
+                  <span class="b-dot dot-amber"></span>
+                  <span class="b-dot dot-green"></span>
+                </div>
+                <div class="browser-address">kalyany-profile.dev</div>
+              </div>
+              <div class="card-image-box">
+                <img src="assets/hero-bg.png" alt="Kalyany S Nair" class="profile-hero-img">
+              </div>
+              <div class="card-caption">
+                <div class="caption-header">
+                  <span class="caption-name">Kalyany S Nair</span>
+                  <span class="caption-pill"><i class="fa-solid fa-star"></i> 9.1 CGPA</span>
+                </div>
+                <p class="caption-desc">Integrated MCA &bull; Amal Jyothi College of Engineering &bull; Kottayam, Kerala</p>
+                <div class="caption-meta">
+                  <span class="meta-item"><i class="fa-solid fa-trophy"></i> SIH 2025 Winner</span>
+                  <span class="meta-item"><i class="fa-solid fa-code-branch"></i> 6 Core Projects</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Reimagined Celestial Technical Orbital Core -->
-          <!-- (Elevated from the original portfolio's iconic planetary visual & hero-bg.png) -->
-          <div class="hero-orbital-stage">
-            <div class="orbital-system-container">
-              
-              <!-- Outer Orbital Ring with Rotating Tech Nodes -->
-              <div class="orbital-ring orbital-ring-outer">
-                <div class="orbital-node node-n" title="FastAPI &amp; Spring Boot"><i class="fa-solid fa-server"></i></div>
-                <div class="orbital-node node-e" title="PostgreSQL &amp; MySQL"><i class="fa-solid fa-database"></i></div>
-                <div class="orbital-node node-s" title="Selenium &amp; pytest"><i class="fa-solid fa-vial"></i></div>
-                <div class="orbital-node node-w" title="TypeScript &amp; React"><i class="fa-brands fa-react"></i></div>
-              </div>
-
-              <!-- Middle Coordinate Ring with Degree Ticks -->
-              <div class="orbital-ring orbital-ring-mid"></div>
-
-              <!-- Inner Morphing Visual Aperture (Features original assets/hero-bg.png) -->
-              <div class="orbital-core-aperture">
-                <div class="orbital-core-glow"></div>
-                <div class="aperture-visual">
-                  <img src="assets/hero-bg.png" alt="Kalyany S Nair - Technical Graphic Design" class="aperture-img">
-                </div>
-              </div>
-
-              <!-- Floating Anchored Metric Telemetries -->
-              <div class="telemetry-card card-academic">
-                <div class="telemetry-card-icon"><i class="fa-solid fa-star"></i></div>
-                <div class="telemetry-card-info">
-                  <span class="telemetry-val">9.1 CGPA</span>
-                  <span class="telemetry-lbl">Integrated MCA</span>
-                </div>
-              </div>
-
-              <div class="telemetry-card card-projects">
-                <div class="telemetry-card-icon"><i class="fa-solid fa-cubes"></i></div>
-                <div class="telemetry-card-info">
-                  <span class="telemetry-val">5 Featured</span>
-                  <span class="telemetry-lbl">Engineered Projects</span>
-                </div>
-              </div>
-
-              <div class="telemetry-card card-hackathon">
-                <div class="telemetry-card-icon"><i class="fa-solid fa-trophy"></i></div>
-                <div class="telemetry-card-info">
-                  <span class="telemetry-val">SIH 2025</span>
-                  <span class="telemetry-lbl">Institution Winner</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Competency Marquee Strip -->
-        <div class="hero-competency-strip">
-          <div class="strip-label">Core Domains:</div>
-          <div class="strip-items">
-            <span class="strip-pill"><i class="fa-solid fa-code"></i> Software Development</span>
-            <span class="strip-dot">•</span>
-            <span class="strip-pill"><i class="fa-solid fa-layer-group"></i> Full-Stack Engineering</span>
-            <span class="strip-dot">•</span>
-            <span class="strip-pill"><i class="fa-solid fa-database"></i> Database Architecture</span>
-            <span class="strip-dot">•</span>
-            <span class="strip-pill"><i class="fa-solid fa-vial-circle-check"></i> Software QA &amp; Testing</span>
-            <span class="strip-dot">•</span>
-            <span class="strip-pill"><i class="fa-brands fa-aws"></i> Cloud &amp; AWS EC2</span>
-            <span class="strip-dot">•</span>
-            <span class="strip-pill"><i class="fa-solid fa-brain"></i> AI &amp; RAG Pipelines</span>
-            <span class="strip-dot">•</span>
-            <span class="strip-pill"><i class="fa-brands fa-wordpress"></i> CMS Development</span>
-          </div>
         </div>
       </div>
     </section>
@@ -305,7 +230,7 @@
                 <div class="metric-sub">Technical &amp; Academic</div>
               </div>
               <div class="metric-card">
-                <div class="metric-num">5</div>
+                <div class="metric-num">6</div>
                 <div class="metric-label">Core Projects</div>
                 <div class="metric-sub">Full Stack, Cloud &amp; AI</div>
               </div>
@@ -615,7 +540,7 @@
                 </div>
                 <div class="timeline-period-badge">
                   <i class="fa-regular fa-calendar-check"></i>
-                  <span>September 2024 – November 2024</span>
+                  <span>December 2024 – March 2025</span>
                 </div>
               </div>
               <ul class="timeline-bullet-list">
@@ -633,7 +558,7 @@
       </div>
     </section>
 
-    <!-- ================= FEATURED PROJECTS SECTION (5 PROJECTS) ================= -->
+    <!-- ================= FEATURED PROJECTS SECTION (6 PROJECTS) ================= -->
     <section class="section section-alt" id="projects">
       <div class="container">
         <div class="section-header">
@@ -641,7 +566,7 @@
           <h2 class="section-title">Projects Showcase</h2>
           <div class="section-title-bar"></div>
           <p class="section-subtitle">
-            Curated selection of 5 practical projects spanning AI-integrated platforms, enterprise applications, cloud deployments, and CMS portals.
+            Curated selection of 6 practical projects spanning healthcare tracking, AI-integrated platforms, enterprise applications, cloud deployments, and CMS portals.
           </p>
         </div>
 
@@ -751,7 +676,59 @@
             </div>
           </article>
 
-          <!-- Project 3: PlayTown (E-Commerce with AWS EC2 Deployment) -->
+          <!-- Project 3: Sweety (Blood Glucose Tracking & Reporting System) -->
+          <article class="project-card-editorial">
+            <div class="project-header-graphic graphic-sweety">
+              <div class="graphic-badge"><i class="fa-solid fa-heart-pulse"></i> Healthcare Analytics</div>
+            </div>
+
+            <div class="project-details-wrapper">
+              <div class="project-meta-top">
+                <span class="status-pill status-completed">
+                  <i class="fa-solid fa-check"></i> Completed
+                </span>
+                <span class="deployment-pill status-fullstack" title="Full-Stack Web Architecture">
+                  <i class="fa-solid fa-layer-group"></i> Full-Stack System
+                </span>
+              </div>
+
+              <h3 class="project-headline">Sweety</h3>
+              <div class="project-subhead">Blood Glucose Tracking &amp; Reporting System</div>
+              
+              <p class="project-summary">
+                A full-stack healthcare tracking web application featuring secure JWT authentication, CRUD operations, input validation, user-specific data isolation, and automated daily and monthly glucose analytical reports.
+              </p>
+
+              <div class="project-highlights">
+                <h4 class="highlights-title"><i class="fa-solid fa-list-check"></i> Key Implementations:</h4>
+                <ul class="highlights-list">
+                  <li>Full-stack architecture pairing a React.js (Vite) frontend with a Node.js &amp; Express RESTful API.</li>
+                  <li>PostgreSQL relational database integration with parameterized queries, connection pooling, and user data isolation.</li>
+                  <li>Secure authentication pipeline using bcrypt password hashing (10 salt rounds) and JSON Web Tokens (JWT).</li>
+                  <li>Data visualization of glucose trends across 4 daily time slots with daily, month-to-date, and monthly reporting.</li>
+                </ul>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-tech-pills">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express.js</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">JWT</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Kalyanysnair/Sweety-Blood-Glucose-Tracker" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <i class="fa-brands fa-github"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: PlayTown (E-Commerce with AWS EC2 Deployment) -->
           <article class="project-card-editorial">
             <div class="project-header-graphic graphic-playtown">
               <div class="graphic-badge"><i class="fa-solid fa-cart-shopping"></i> Full-Stack E-Commerce</div>
@@ -801,7 +778,7 @@
             </div>
           </article>
 
-          <!-- Project 4: SwiftAid (Healthcare Ambulance Booking with AWS EC2 Deployment) -->
+          <!-- Project 5: SwiftAid (Healthcare Ambulance Booking with AWS EC2 Deployment) -->
           <article class="project-card-editorial">
             <div class="project-header-graphic graphic-swiftaid">
               <div class="graphic-badge"><i class="fa-solid fa-truck-medical"></i> Healthcare Transit</div>
@@ -852,7 +829,7 @@
             </div>
           </article>
 
-          <!-- Project 5: Luminah (Fashion Magazine Portal - WordPress CMS & Elementor) -->
+          <!-- Project 6: Luminah (Fashion Magazine Portal - WordPress CMS & Elementor) -->
           <article class="project-card-editorial project-card-cms">
             <div class="project-header-graphic graphic-luminah">
               <div class="graphic-badge"><i class="fa-solid fa-newspaper"></i> Fashion Magazine Portal</div>
@@ -1567,11 +1544,6 @@
                   class="social-pill-btn" aria-label="GitHub Profile">
                   <i class="fa-brands fa-github"></i>
                   <span>GitHub</span>
-                </a>
-                <a href="assets/resume/Kalyany_S_Nair_Resume.pdf" target="_blank" rel="noopener noreferrer"
-                  download="Kalyany_S_Nair_Resume.pdf" class="social-pill-btn" aria-label="Download Resume PDF">
-                  <i class="fa-solid fa-file-arrow-down"></i>
-                  <span>Resume</span>
                 </a>
               </div>
             </div>
